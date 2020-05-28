@@ -73,7 +73,6 @@ predict_size_test = int(math.ceil(nb_test_samples / batch_size))
 # build fine tune vgg16 model
 vgg16_model = keras.applications.vgg16.VGG16()
 # vgg16_model.summary()
-# type(vgg16_model)  # 输出为model，不是sequential，需要转换
 model = Sequential()
 for layer in vgg16_model.layers[0: -2]:
     model.add(layer)
